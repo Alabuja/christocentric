@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="We give you access to Christocentric Songs">
+    <meta name="description" content="We help Christians around the world with easy access to Christ centered songs to aid your spiritual growth as the songs on our platform have only a focus which is Jesus">
     <meta name="keywords" content="Songs, Song, Christocentric, Gospel Songs, Gospel Song, Christian songs, Christian song">
     <meta name="author" content="Daniel Alabuja">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,8 +48,8 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
               <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="{{ url('/')}}"><img src="{{ url('img/newlogo2.png') }} " alt="logo" class="logo logo-display">
-            	<img src="{{url('img/newlogo.png') }}" class="logo logo-scrolled" alt="">
+            <a class="navbar-brand" href="{{ url('/')}}"><img src="{{ url('img/logo.png') }} " alt="logo" class="logo logo-display">
+            	<img src="{{url('img/logo6.png') }}" class="logo logo-scrolled" alt="">
             </a>
           </div>
           <div class="collapse navbar-collapse" id="navbar-menu">
@@ -123,7 +123,7 @@
     <script src="{{ asset('/js/revolution.extension.slideanims.min.js') }}"></script>
     <script src="{{ asset('/js/revolution.extension.video.min.js') }}"></script>
     <script src="{{ asset('/js/functions.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> --}}
     <script src="{{ asset('js/share.js') }}"></script>
 </body>
 </html>

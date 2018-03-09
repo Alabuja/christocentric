@@ -6,7 +6,7 @@
     <!-- SLIDE  -->
       <li data-transition="fade">
         <!-- MAIN IMAGE -->
-        <img src="img/background.jpg" alt="" data-bgposition="center center" data-bgfit="cover" data-bgparallax="10" class="rev-slidebg">							
+        <img src="{{url('img/background.jpg')}}" alt="" data-bgposition="center center" data-bgfit="cover" data-bgparallax="10" class="rev-slidebg">							
         <!-- LAYER NR. 1 -->
         <div class="tp-caption tp-resizeme" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['326','270','270','150']" data-voffset="['0','0','0','0']"	data-visibility="['on','on','on','on']" data-transform_idle="o:1;"
         data-transform_in="z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;s:1500;e:Power3.easeInOut;" data-transform_out="y:[100%];s:1000;e:Power2.easeInOut;s:1000;e:Power2.easeInOut;" data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="800"><h1>Christocentric Lyrics</h1>

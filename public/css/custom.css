@@ -162,3 +162,10 @@ nav.navbar.bootsnav.no-full .navbar-collapse.in {
       display: inline-block;
       font-size: 1.2em;
   }
+
+  #fb-comments h5{
+    margin-top: 45px;
+    font-size: 1.22em;
+    color:#0f0f0f;
+    margin-bottom: 15px;
+  }

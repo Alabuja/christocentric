@@ -13,10 +13,6 @@ class PostApproveController extends Controller
     public function postApprove(Request $request)
     {
 
-        // list($width, $height) = getimagesize($song_image);
-
-        // $fileUrl = Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height" => $height]);
-
         if($request->hasFile('song_image'))
         {
         	$this->validate($request, [
@@ -53,36 +49,4 @@ class PostApproveController extends Controller
 
 
 	    }
-        //save to uploads directory
-        //$image->move(public_path("uploads"), $name);
-
-
-        //$this->saveImage($request, $fileUrl);
-
-
-  //       $request->session()->flash('success', 'New Song Approved succesfully!!!');
- 
-  //       return back();
-
-
-  //       $approve = new Approve;
-		// $approve->artiste_id = $request->input('artiste_id');
-  //       $approve->song_name = $request->input('song_name');
-  //       $approve->download_link = $request->input('download_link');
-  //       $approve->lyrics = $request->input('lyrics');
-  //       $approve->save();
-    }
-
-    // private function saveImage(Request $request, $fileUrl)
-    // {
-    //     $approve = new Approve;
-    //     $approve->song_image = $request->file('song_image')->getClientOriginalName();
-    //     $approve->artiste_id = $request->input('artiste_id');
-    //     $approve->song_name = $request->input('song_name');
-    //     $approve->download_link = $request->input('download_link');
-    //     $approve->lyrics = $request->input('lyrics');
-    //     $approve->file_url = $fileUrl;
-
-    //     $approve->save();
-    // }
 }

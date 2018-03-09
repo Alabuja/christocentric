@@ -3,10 +3,15 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="We give you access to Christocentric Songs">
+    <meta name="description" content="We help Christians around the world with easy access to Christ centered songs to aid your spiritual growth as the songs on our platform have only a focus which is Jesus">
     <meta name="keywords" content="Songs, Song, Christocentric, Gospel Songs, Gospel Song, Christian songs, Christian song">
     <meta name="author" content="Daniel Alabuja">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ChristocentricLyrics" />
+    <meta name="twitter:creator" content="@Alabuja" />
+    <meta name="twitter:title" content="@yield('twitter:title')" />
+    <meta name="twitter:image" content="@yield('twitter:image')" />
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

@@ -1,7 +1,11 @@
 @extends('layouts.app2')
 
 <?php $ArtisteName = htmlspecialchars($artiste->artiste_name); ?>
+@if($songs)
+@foreach($songs as $song)
 @section('title', "| $ArtisteName")
+@section('twitter:title',$song->song_name)
+@section('twitter:image',$song->file_url)
 
 @section('content')
 <!--Page Header-->
@@ -19,11 +23,11 @@
 <section id="facts" class="padding">
 <div class="container">
     {{-- {{$songs->approve->slug}} --}}
-    @if($songs)
+    
         
         <p class="artisteProfileBio">{!!$artiste->biography or ''!!}</p>
         <div class="row" id="displayImages">
-            @foreach($songs as $song)
+            
                 <a href="/artiste/{{$artiste->slug}}/{{$song->slug}}"> {{-- Get the slug from the artistes table then get slug from the songs table--}}
                     <div class="col-md-3 col-sm-6">
 
@@ -32,14 +36,14 @@
                         <p class="artisteProfileSongName">{{$song->song_name}}</p>
                     </div>
                 </a>
-            @endforeach
+            
         </div>
-    @endif
 
     </div>
 </section>
 @include('footer')
 @endsection
-
+@endforeach
+@endif
 
 {{-- DONE WITH THIS PLACE --}}

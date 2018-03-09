@@ -10,7 +10,7 @@ use App\Http\Requests;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Validator;
-
+ 
 class ArtisteController extends Controller
 {
     public function addArtiste()

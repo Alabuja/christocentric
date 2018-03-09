@@ -43,7 +43,7 @@
     <header>
       <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
         <div class="container"> 
-            <div class="search_btn btn_common"><i class="icon-icons185"></i></div>
+            {{-- <div class="search_btn btn_common"><i class="icon-icons185"></i></div> --}}
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
               <i class="fa fa-bars"></i>
@@ -87,13 +87,13 @@
         </div>   
       </nav>
     </header>
-    <div id="search">
+    {{-- <div id="search">
       <button type="button" class="close">×</button>
       <form>
         <input type="search" value="" placeholder="Search here...."  required/>
         <button type="submit" class="btn btn_common blue">Search</button>
       </form>
-    </div>
+    </div> --}}
 
     @yield('content')
 

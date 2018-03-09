@@ -16,7 +16,7 @@ use Purifier;
 class ApproveController extends Controller
 {
     public function getApprove()
-    {
+    { 
     	$approveArtiste = [
     		'approveartiste' => Artiste::all(),
     	];

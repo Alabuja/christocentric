@@ -1,6 +1,7 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 @section('title', '| PRIVACY POLICY')
+@section('twitter:title',"Privacy Policy")
 
 @section('content')
 	<!--Page Header-->

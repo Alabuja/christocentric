@@ -1,6 +1,8 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 @section('title', '| SUBMIT SONGS')
+
+@section('twitter:title',"Submit Songs")
 
 @section('content')
 <!--Page Header-->
@@ -18,7 +20,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-        	<p id="introSubmitSongs">You can submit songs even without registering on the site</p>
+        	<p id="introSubmitSongs">Do you have any song(s) that has aided your spiritual growth and you would like to share, while dont  you submit the song(s) even without registering on the site</p>
         	@include('layouts.alerts')
             <form role="form" action="{{ url('add-lyrics') }}" method="POST">
 	            {{ csrf_field() }}

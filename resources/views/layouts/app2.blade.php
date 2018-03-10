@@ -147,7 +147,7 @@
     <script src="{{ asset('/js/revolution.extension.slideanims.min.js') }}"></script>
     <script src="{{ asset('/js/revolution.extension.video.min.js') }}"></script>
     <script src="{{ asset('/js/functions.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> --}}
     <script src="{{ asset('js/share.js') }}"></script>
 </body>
 </html>

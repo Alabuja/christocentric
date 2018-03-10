@@ -1,6 +1,8 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 @section('title', '| ARTISTES PROFILE')
+
+@section('twitter:title',"View All Artistes")
 
 @section('content')
 <!--Page Header-->

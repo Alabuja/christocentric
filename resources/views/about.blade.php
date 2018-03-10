@@ -1,6 +1,7 @@
-@extends('layouts.app2')
+@extends('layouts.app')
 
 @section('title', '| About Us')
+@section('twitter:title',"About Us")
 
 @section('content')
 	<!--Page Header-->

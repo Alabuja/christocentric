@@ -7,6 +7,12 @@
     <meta name="keywords" content="Songs, Song, Christocentric, Gospel Songs, Gospel Song, Christian songs, Christian song">
     <meta name="author" content="Daniel Alabuja">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@ChristocentricLyrics" />
+    <meta name="twitter:creator" content="@Alabuja" />
+    <meta name="twitter:title" content="Christocentric Lyrics (Christ Centered Songs)" />
+    <meta name="twitter:description" content="We help Christians around the world with easy access to Christ centered songs to aid your spiritual growth as the songs on our platform have only a focus which is Jesus" />
+    <meta name="twitter:image" content="{{url('img/background.jpg')}}" />
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">

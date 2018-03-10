@@ -3,12 +3,10 @@
 <?php $SongName = htmlspecialchars($singleSong->song_name); ?>
 <?php $ArtisteName = htmlspecialchars($singleSong->artiste_name); ?>
 
-
-@if($singleSong)
 @section('title', "| $SongName - $ArtisteName")
-@section('twitter:title',"$SongName - $ArtisteName")
-@section('twitter:image',$singleSong->file_url)
+
 @section('content')
+@if($singleSong)
 <!--Page Header-->
 <section class="page_header padding-top">
   <div class="container">
@@ -34,7 +32,6 @@
             <p>{!!$singleSong->lyrics!!}</p>
         </div>
     </div>
-
     <div id="fb-comments">
       <h5>What Do you Have To Say About This Song?</h5>
     </div>
@@ -42,8 +39,7 @@
 </div>
 </section>
 @include('footer')
-
+@endif
 @endsection
 
-@endif
 {{-- DONE WITH THIS PLACE --}}

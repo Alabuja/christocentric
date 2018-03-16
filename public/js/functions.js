@@ -95,11 +95,11 @@ jQuery(function($) {
 
     $(".search_btn").on("click", function(event) {
             event.preventDefault();
-            $("#search").addClass("open");
-            $("#search > form > input[type='search']").focus();
+            $("#typeahead-container").addClass("open");
+            $("#typeahead-container > form > input[type='search']").focus();
         });
 
-        $("#search, #search button.close").on("click keyup", function(event) {
+        $("#typeahead-container, #typeahead-container button.close").on("click keyup", function(event) {
             if (event.target == this || event.target.className == "close" || event.keyCode == 27) {
                 $(this).removeClass("open");
             }
@@ -109,7 +109,7 @@ jQuery(function($) {
     var revapi;
     revapi = jQuery("#rev_slider").revolution({
         sliderType: "standard",
-        sliderLayout: "fullwidth",
+        sliderLayout: "fullwidth", 
         scrollbarDrag: "true",
         delay: 9000,
         spinner: "off",

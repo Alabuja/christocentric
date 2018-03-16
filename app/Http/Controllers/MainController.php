@@ -3,16 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Traits\SearchTrait;
 
 class MainController extends Controller
 {
     public function privacy()
     {
-    	return view('privacy');
+    	$search = $this->search();
+    	return view('privacy', compact('search'));
     }
 
     public function about()
     {
-    	return view('about');
+    	$search = $this->search();
+    	return view('about', compact('search'));
     }
 }

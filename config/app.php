@@ -180,7 +180,6 @@ return [
         JD\Cloudder\CloudderServiceProvider::class,
         Cviebrock\EloquentSluggable\ServiceProvider::class,
         Mews\Purifier\PurifierServiceProvider::class,
-        Laravel\Scout\ScoutServiceProvider::class,
         Jorenvh\Share\Providers\ShareServiceProvider::class,
 
     ],

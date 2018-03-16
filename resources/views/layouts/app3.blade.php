@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/settings.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootsnav.css') }}">
     <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="css/typeahead.css">
     <link rel="icon" href="{{ asset('img/favicon.png') }}">
 
     <style type="text/css">
@@ -49,13 +50,13 @@
     <header>
       <nav class="navbar navbar-default navbar-fixed white no-background bootsnav">
         <div class="container"> 
-            {{-- <div class="search_btn btn_common"><i class="icon-icons185"></i></div> --}}
+            <div class="search_btn btn_common"><i class="icon-icons185"></i></div>
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
               <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand" href="{{ url('/')}}"><img src="{{ url('img/logo.png') }} " alt="logo" class="logo logo-display">
-            	<img src="{{url('img/logo6.png') }}" class="logo logo-scrolled" alt="">
+            <a class="navbar-brand" href="{{ url('/')}}"><img src="{{ url('img/logo6.png') }} " alt="logo" class="logo logo-display">
+            	<img src="{{url('img/logo.png') }}" class="logo logo-scrolled" alt="">
             </a>
           </div>
           <div class="collapse navbar-collapse" id="navbar-menu">
@@ -93,25 +94,20 @@
         </div>   
       </nav>
     </header>
-    {{-- <div id="search">
+    <div class="typeahead-container" id="typeahead-container">
       <button type="button" class="close">×</button>
-      <form>
-        <input type="search" value="" placeholder="Search here...."  required/>
+      <form class="typeahead" role="search" action="{{url('search')}}">
+        <span class="typeahead-query" id="typeahead-query">
+            <input type="search" name="search" class="form-control search-input" id="flyer-query" placeholder="Search" autocomplete="off"/>
+        </span>
         <button type="submit" class="btn btn_common blue">Search</button>
       </form>
-    </div> --}}
+    </div>
 
     @yield('content')
 
     <!-- Scripts --><!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112797924-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-112797924-1');
-	</script>
 
     {{-- <script src="{{ asset('/js/app.js') }}"></script> --}}
     <script src="{{ asset('/js/jquery.min.js') }}"></script>
@@ -129,7 +125,20 @@
     <script src="{{ asset('/js/revolution.extension.slideanims.min.js') }}"></script>
     <script src="{{ asset('/js/revolution.extension.video.min.js') }}"></script>
     <script src="{{ asset('/js/functions.js') }}"></script>
-    {{-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> --}}
     <script src="{{ asset('js/share.js') }}"></script>
+    <script src="{{asset('js/typeahead.js') }}"></script>
+
+    <script>
+        $('#flyer-query').typeahead({
+            minLength: 2,
+            source: {
+                data: [
+                    @foreach($search as $query)
+                         "{{ $query->song_name or $query->lyrics or $query->artiste_name}}",
+                    @endforeach
+                ]
+            }
+        });
+    </script>
 </body>
 </html>

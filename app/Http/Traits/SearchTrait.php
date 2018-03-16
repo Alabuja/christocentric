@@ -12,9 +12,9 @@ trait SearchTrait {
 		$query = Input::get('search');
 
 		$search = Artiste::join('approves', 'artistes.id', '=', 'approves.artiste_id')
-						->where('approves.song_name', 'LIKE', "%{$query}%")
-						->orWhere('approves.lyrics', 'LIKE', "%{$query}%")
-						->orWhere('artistes.artiste_name', 'LIKE', "%{$query}%")
+						->where('approves.song_name', 'LIKE', '%'. $query. '%')
+						->orWhere('approves.lyrics', 'LIKE', '%'.$query. '%')
+						->orWhere('artistes.artiste_name', 'LIKE', '%'.$query.'%')
 						->paginate(200);
 
 		if($search->isEmpty()) 

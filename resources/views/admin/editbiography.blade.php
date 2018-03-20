@@ -19,7 +19,7 @@
         <!-- Main content -->
         <section class="content clearfix">
             <!-- Small boxes (Stat box) -->
-            <div class="col-lg-10">
+            <div class="col-lg-8 col-md-offset-2">
 
                 <div class="box">
                     <div class="box-header">

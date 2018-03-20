@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/settings.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('/css/bootsnav.css') }}">
     <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="css/typeahead.css">
+    <link rel="stylesheet" href="{{ asset('/css/typeahead.css')}}">
     <link rel="icon" href="{{ asset('img/favicon.png') }}">
 
     <style type="text/css">
@@ -134,7 +134,8 @@
             source: {
                 data: [
                     @foreach($search as $query)
-                         "{{ $query->song_name or $query->lyrics or $query->artiste_name}}",
+                         "{{ $query->song_name}}",
+                         "{{$query->artiste_name}}"
                     @endforeach
                 ]
             }

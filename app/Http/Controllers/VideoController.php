@@ -18,22 +18,22 @@ class VideoController extends Controller
     public function welcome()
     { 
         $search = $this->search();
-        $welcome =  Approve::orderBy('id', 'desc')->take(28)->get();
+        $Songs =  Approve::orderBy('id', 'desc')->take(28)->get();
             // 'newSongs' => Approve::paginate(30),
         //];
  
-        return view('welcome', compact('welcome', 'search'));
+        return view('welcome')->with('Songs', $Songs)->with('search', $search);
     }
 
     public function lyrics()
     {
         $search = $this->search();
-    	$lyrics = [
+    	$Lyrics = [
     		'Lyrics' => Approve::all(),
     		'Lyrics' => Approve::paginate(1000),
     	];
 
-    	return view('lyrics', compact('lyrics', 'search'));
+    	return view('lyrics')->with('Lyrics', $Lyrics)->with('search', $search);
     }
 
     public function artisteBio()
@@ -48,7 +48,7 @@ class VideoController extends Controller
         //                     ->orderBy('artistes.artiste_name', 'ASC')
         //                     ->get(); 
 
-    	return view('artisteprofile', compact('artisteProfiles', 'search'));
+    	return view('artisteprofile')->with('artisteProfiles', $artisteProfiles)->with('search', $search);
     }
 
     public function singleArtisteBio($slug)
@@ -61,7 +61,7 @@ class VideoController extends Controller
             $view_data['artiste'] = $artiste = Artiste::whereSlug($slug)->first();
             $view_data['songs'] = Approve::whereArtisteId($artiste->id)->get();
             
-            return view('singleartisteprofile', $view_data, compact('search'));
+            return view('singleartisteprofile')->with('view_data', $view_data)->with('search', $search);
         } 
         catch (ModelNotFoundException $ex) 
         {
@@ -87,7 +87,7 @@ class VideoController extends Controller
                             ->first();
             //$result = ShareFacade::currentPage()->facebook();
 
-            return view('singlesong', compact('singleSong', 'search'));
+            return view('singlesong')->with('singleSong', $singlesong)->with('search', $search);
         }
         catch(ModelNotFoundException $ex)
         {

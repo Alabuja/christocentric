@@ -6,9 +6,9 @@
     <section id="facts" class="padding">
         <h3 id="latestSongs">Latest Songs</h3>
         <div class="container">
-            @if($welcome)
+            @if($Songs)
                 <div class="row">
-                    @foreach($welcome as $song)
+                    @foreach($Songs as $song)
                         <div class="col-md-3 col-sm-5 col-xs-6 text-layer">
                             <div class="content_img">
                                 <a href="artiste/{{$song->artiste->slug}}/{{$song->slug}}">

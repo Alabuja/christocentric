@@ -61,7 +61,7 @@ class VideoController extends Controller
             $view_data['artiste'] = $artiste = Artiste::whereSlug($slug)->first();
             $view_data['songs'] = Approve::whereArtisteId($artiste->id)->get();
             
-            return view('singleartisteprofile')->with('view_data', $view_data)->with('search', $search);
+            return view('singleartisteprofile', $view_data)->with('search', $search);
         } 
         catch (ModelNotFoundException $ex) 
         {
@@ -87,7 +87,7 @@ class VideoController extends Controller
                             ->first();
             //$result = ShareFacade::currentPage()->facebook();
 
-            return view('singlesong')->with('singleSong', $singlesong)->with('search', $search);
+            return view('singlesong')->with('singleSong', $singleSong)->with('search', $search);
         }
         catch(ModelNotFoundException $ex)
         {

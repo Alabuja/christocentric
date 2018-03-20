@@ -53,6 +53,27 @@ class ArtisteController extends Controller
 		return view('admin.singleartiste', compact('songs'));
 	}
 
+
+	public function editSingleArtiste($id)
+	{
+		$artistesBiography = Artiste::find($id);
+		return view('admin.editbiography', compact('artistesBiography'));
+	}
+
+	public function updateSingleArtiste(Request $request, $id)
+	{
+		$artistesBiography = Artiste::findOrFail($id);
+		$this->validate($request, [
+			'artiste_name' => 'required',
+			'biography' => ''
+		]);
+
+		$artistesBiography->fill($request->all())->save();
+
+		$request->session()->flash('success', 'Artiste Biography has been updated successfully!!!');
+        return back();
+	}
+
 	/**
 	*  End the Change above i.e. for both method above, it should get from the table approves
 	*/

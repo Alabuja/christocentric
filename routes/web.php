@@ -72,6 +72,8 @@ Route::group(['middleware' => ['admin']], function(){
 	Route::get('admin/artistes', 'ArtisteController@getArtiste');
 	// Route::post('admin/newadminartiste', 'Admin\AdminFrontController@postArtiste');
 	Route::get('admin/artistes/{id}', 'ArtisteController@getSingleArtiste');
+	Route::get('admin/artiste/{id}', 'ArtisteController@editSingleArtiste');
+	Route::post('admin/artiste/{id}', 'ArtisteController@updateSingleArtiste');
 
 	Route::get('admin/approve-artiste', 'ApproveController@getApprove');
 	Route::post('admin/approve-artiste', 'ApproveController@postApprove');

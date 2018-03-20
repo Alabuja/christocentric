@@ -44,6 +44,7 @@
                                     <td>{{$artiste->artiste->artiste_name}}</td>
                                     <td>{{$artiste->artiste->biography}}</td>
                                     <td><a href="/admin/artistes/{{$artiste->artiste->id}}">View Profile</a></td>
+                                    <td><a href="/admin/artiste/{{$artiste->artiste->id}}">Edit</a></td>
                                     
                                 </tr>
                                 <?php $i++ ?>

@@ -43,8 +43,8 @@
                                 </div>
                                 <div class="form-group {{ $errors->has('biography') ? 'has-error': ''}}">
                                     <label>Artiste Biography</label>
-                                    <textarea placeholder="Enter Artiste Biography" name="biography" rows="7" 
-                                    value="{!! $artistesBiography->biography !!}">
+                                    <textarea placeholder="Enter Artiste Biography" name="biography" rows="7">
+                                        {!! $artistesBiography->biography !!}
                                     </textarea>
 
                                     @if($errors->has('biography'))

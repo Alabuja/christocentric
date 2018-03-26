@@ -58,7 +58,7 @@
     <header>
       <nav class="navbar navbar-default navbar-sticky bootsnav"> 
         <div class="container">
-            {{-- <div class="search_btn btn_common"><i class="icon-icons185"></i></div> --}}
+            <div class="search_btn btn_common"><i class="icon-icons185"></i></div>
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
               <i class="fa fa-bars"></i>
@@ -102,13 +102,15 @@
         </div>   
       </nav>
     </header>
-    {{-- <div id="search">
+    <div class="typeahead-container" id="typeahead-container">
       <button type="button" class="close">×</button>
-      <form>
-        <input type="search" value="" placeholder="Search here...."  required/>
+      <form class="typeahead" role="search" action="{{route('queries.search')}}">
+        <span class="typeahead-query" id="typeahead-query">
+            <input type="search" name="search" class="form-control search-input" id="flyer-query" placeholder="Search" autocomplete="off"/>
+        </span>
         <button type="submit" class="btn btn_common blue">Search</button>
       </form>
-    </div> --}}
+    </div>
 
     @yield('content')
 
@@ -149,5 +151,19 @@
     <script src="{{ asset('/js/functions.js') }}"></script>
     {{-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> --}}
     <script src="{{ asset('js/share.js') }}"></script>
+    <script>
+        $('#flyer-query').typeahead({
+            minLength: 2,
+            source: {
+                data: [
+                    @foreach($search as $query)
+                         "{{ $query->song_name}}"
+                         "{{$query->artiste_name}}"
+                         "{!! $query->lyrics !!}",
+                    @endforeach
+                ]
+            }
+        });
+    </script>
 </body>
 </html>

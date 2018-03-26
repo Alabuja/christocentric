@@ -33,7 +33,7 @@ class VideoController extends Controller
     		'Lyrics' => Approve::paginate(1000),
     	];
 
-    	return view('lyrics')->with('Lyrics', $Lyrics)->with('search', $search);
+    	return view('lyrics', $Lyrics)->with('search', $search);
     }
 
     public function artisteBio()

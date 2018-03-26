@@ -16,21 +16,6 @@ class Artiste extends Model
     	'artiste_name', 'biography',
     ];
 
-    // protected $searchable = [
-    //     'columns' => [
-
-    //         'artistes.artiste_name' => 10,
-    //         'approves.lyrics' => 5,
-    //         'approves.song_name' => 1,
-
-    //     ],
-
-    //     'joins' => [
-
-    //         'artistes' => ['artistes.id', 'approves.artiste_id'],
-    //     ],
-    // ];
-
     /**
      * Return the sluggable configuration array for this model.
      *

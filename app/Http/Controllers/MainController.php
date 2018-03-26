@@ -7,6 +7,8 @@ use App\Http\Traits\SearchTrait;
 
 class MainController extends Controller
 {
+	use SearchTrait;
+	
     public function privacy()
     {
     	$search = $this->search();

@@ -96,7 +96,7 @@
     </header>
     <div class="typeahead-container" id="typeahead-container">
       <button type="button" class="close">×</button>
-      <form class="typeahead" role="search" action="{{url('search')}}">
+      <form class="typeahead" role="search" action="{{url('queries')}}">
         <span class="typeahead-query" id="typeahead-query">
             <input type="search" name="search" class="form-control search-input" id="flyer-query" placeholder="Search" autocomplete="off"/>
         </span>
@@ -134,8 +134,9 @@
             source: {
                 data: [
                     @foreach($search as $query)
-                         "{{ $query->song_name}}",
+                         "{{ $query->song_name}}"
                          "{{$query->artiste_name}}"
+                         "{!! $query->lyrics !!}",
                     @endforeach
                 ]
             }

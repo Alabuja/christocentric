@@ -5,13 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Model\Artiste;
 use App\Model\Approve;
-use App\Http\Traits\SearchTrait;
-// use Illuminate\Support\Facades\Input;
-
 
 class SearchController extends Controller
 {
-
 	public function search() {
 
 		$query = Input::get('search');

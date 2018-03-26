@@ -37,7 +37,10 @@ Route::group(['middleware' => ['guest']], function(){
 	// Route::get('contact-us', 'MainController@contact');
 	Route::get('about-us', 'MainController@about');
 
-	Route::post('/search', 'SearchController@search');
+	Route::post('/queries',[
+        'uses' => '\App\Http\Controllers\SearchController@search', 
+        'as'   => 'queries.search',
+    ]);
 
 	/**
 	* The URL is something like this without the artiste for singlesong

@@ -20,13 +20,13 @@
 <div class="container">
     @if($Lyrics)
         <div class="row">
-            @foreach($Lyrics as $newsong)
+            @foreach($Lyrics as $Lyric)
                 <div class="col-md-3 col-sm-5 col-xs-6 text-layer">
                     <div class="content_img">
-                      <a href="/artiste/{{$newsong->artiste->slug}}/{{$newsong->slug}}">
-                          <img src="{{$newsong->file_url}}" class="img-responsive" width="100%" height="100%">
+                      <a href="/artiste/{{$Lyric->artiste->slug}}/{{$Lyric->slug}}">
+                          <img src="{{$Lyric->file_url}}" class="img-responsive" width="100%" height="100%">
 
-                          <div class="nameSong">{{$newsong->song_name}} - {{$newsong->artiste->artiste_name}} </div>
+                          <div class="nameSong">{{$Lyric->song_name}} - {{$Lyric->artiste->artiste_name}} </div>
                       </a>
                     </div>
                 </div>
